@@ -4,7 +4,7 @@ const Card = ({ blog }) => {
     return (
         <>
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-200 ">
-                <img className="h-96 w-full object-cover rounded-t-lg cursor-pointer" src={`https://nodejs-ds6o.onrender.com/${blog.image}`} alt="useImage" />
+            <img className="h-96 w-full object-cover rounded-t-lg cursor-pointer" src={`https://nodejs-ds6o.onrender.com/${blog.image}`} alt="useImage" />
                 <div className="p-5">
                     <a href="#">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {blog.title} </h5>
