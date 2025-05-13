@@ -33,12 +33,12 @@ const Form = () => {
                 "Content-Type" : "multipart/form-data"
             }
         })
-        
+
         if(response.status === 200){
-            alert("Form Submitted !!!")
+            console.log("Form Submitted !!!")
             navigate("/")
         } else {
-            alert("Something went wrong !")
+            console.log("Something went wrong !")
         }
     }
 

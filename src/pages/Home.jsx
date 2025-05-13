@@ -19,7 +19,7 @@ const Home = ()=>{
         <>
 
         <Navbar />
-        <div className="flex flex-wrap justify-center items-center gap-8 my-8">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto gap-8 my-8">
             {
                 blogs.map(function(blog){
                     return(
