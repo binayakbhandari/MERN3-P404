@@ -8,7 +8,7 @@ const SingleBlogPage = () => {
     const [blog, setBlog] = useState({})
 
     const fetchBlog = async () => {
-        const response = await axios.get("http://localhost:3000/blog/" + id)
+        const response = await axios.get("https://nodejs-ds6o.onrender.com/blog/" + id)
         setBlog(response.data.data)
     }
 
@@ -17,7 +17,7 @@ const SingleBlogPage = () => {
     }, [])
 
     const deleteBlog = async () => {
-        const response = await axios.delete("http://localhost:3000/blog/" + id)
+        const response = await axios.delete("https://nodejs-ds6o.onrender.com/blog/" + id)
         if (response.status === 200) {
             console.log("Blog deleted successfully !")
             navigate("/")
