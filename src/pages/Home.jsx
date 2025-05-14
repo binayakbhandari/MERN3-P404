@@ -7,7 +7,7 @@ const Home = ()=>{
     const [blogs, setBlogs] = useState([])
 
     const fetchBlogs = async ()=>{
-        const response = await axios.get("https://nodejs-ds6o.onrender.com/blog")
+        const response = await axios.get("http://localhost:3000/blog")
         setBlogs(response.data.data)
     }
 
@@ -19,15 +19,15 @@ const Home = ()=>{
         <>
 
         <Navbar />
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto gap-8 my-8">
-            {
-                blogs.map(function(blog){
-                    return(
-                        <Card blog={blog} />
-                    )
-                })
-            }
+      {/* <div className="max-w-screen-xl mx-auto p-4">
+        <div className="flex flex-wrap justify-center items-center gap-8 my-8"> */}
+        <div className="max-w-screen-xl mx-auto p-4">
+            <div className="flex flex-wrap justify-center items-center gap-8 my-8">
+          {blogs.map(function (blog) {
+            return <Card key={blog._id} blog={blog} />;
+          })}
         </div>
+      </div>
 
 
         </>

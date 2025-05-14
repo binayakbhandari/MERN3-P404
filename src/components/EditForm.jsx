@@ -28,7 +28,7 @@ const EditForm = () => {
     const editBlog = async (e) => {
         e.preventDefault()
 
-        const response = await axios.put("https://nodejs-ds6o.onrender.com/blog/" + id, data, {
+        const response = await axios.put("http://localhost:3000/blog/" + id, data, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
@@ -42,7 +42,7 @@ const EditForm = () => {
     }
 
     const fetchBlog = async () => {
-        const response = await axios.get("https://nodejs-ds6o.onrender.com/blog/" + id)
+        const response = await axios.get("http://localhost:3000/blog/" + id)
         if(response.status === 200) {
             setData({
                 title : response.data.data.title,
